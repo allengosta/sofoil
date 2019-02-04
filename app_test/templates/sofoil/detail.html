@@ -1,0 +1,25 @@
+{% extends 'sofoil/index.html' %}
+{% block title %} {{ block.main }} Список скважин {% endblock %}
+{% block content %}
+
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <td>Наименование</td>
+        <td>X</td>
+        <td>Y</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for t in well_list %}
+    <tr>
+        <td><a href="{% url 'app_test:detail_inter' t.id %}">{{ t.name }}</a></td>
+        <td>{{ t.X }}</td>
+        <td>{{ t.Y }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <a href="{% url 'app_test:index' %}">назад</a>
+{% endblock %}
+

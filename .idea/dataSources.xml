@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="kvartimall@92.63.106.50" uuid="88384eec-f31f-46b9-b416-59d9a31e699c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://92.63.106.50:5432/kvartimall</jdbc-url>
+    </data-source>
+  </component>
+</project>

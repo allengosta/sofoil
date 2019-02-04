@@ -1,0 +1,27 @@
+{% extends 'sofoil/index.html' %}
+{% block title %} {{ block.main }} Список Пластопересечений {% endblock %}
+{% block content %}
+
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <td>Наименование скважин</td>
+        <td>Наименование пластов</td>
+        <td>X</td>
+        <td>Y</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for t in inter_list %}
+    <tr>
+        <td>{{ t.well.name }}</td>
+        <td>{{ t.layer.name }}</td>
+        <td>{{ t.X }}</td>
+        <td>{{ t.Y }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <a href="{% url 'app_test:index' %}">назад</a>
+{% endblock %}
+
